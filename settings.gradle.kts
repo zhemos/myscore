@@ -21,5 +21,7 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "MyScore"
+
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 include(":app")
 include(":core:designsystem")
