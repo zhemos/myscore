@@ -25,3 +25,7 @@ rootProject.name = "MyScore"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 include(":app")
 include(":core:designsystem")
+include(":feature:all_games")
+include(":feature:live")
+include(":feature:favourites")
+include(":feature:standings")

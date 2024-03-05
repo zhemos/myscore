@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">MyScore</string>
+
+    <string name="all_games">All games</string>
+    <string name="live">Live</string>
+    <string name="favourites">Favourites</string>
+    <string name="standings">Standings</string>
 </resources>

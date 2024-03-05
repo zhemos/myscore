@@ -11,6 +11,7 @@ import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 
@@ -45,31 +46,31 @@ private val DarkColorScheme = darkColorScheme(
 
 @VisibleForTesting
 private val LightColorScheme = lightColorScheme(
-    primary = White,
+    primary = Color.Green,
     onPrimary = White,
-    primaryContainer = White,
-    onPrimaryContainer = White,
-    secondary = White,
-    onSecondary = White,
-    secondaryContainer = White,
-    onSecondaryContainer = White,
-    tertiary = White,
+    primaryContainer = Color.Magenta,
+    onPrimaryContainer = Color.Yellow,
+    secondary = Color.Red,
+    onSecondary = Color.Green,
+    secondaryContainer = Color.Magenta,
+    onSecondaryContainer = Color.Yellow,
+    tertiary = Color.Magenta,
     onTertiary = White,
-    tertiaryContainer = White,
-    onTertiaryContainer = White,
+    tertiaryContainer = Color.Red,
+    onTertiaryContainer = Color.Blue,
     error = White,
     onError = White,
     errorContainer = White,
     onErrorContainer = White,
-    background = White,
-    onBackground = White,
+    background = Color.Black,
+    onBackground = Yellow,
     surface = White,
-    onSurface = White,
-    surfaceVariant = White,
-    onSurfaceVariant = White,
-    inverseSurface = White,
-    inverseOnSurface = White,
-    outline = White,
+    onSurface = Red10,
+    surfaceVariant = DarkYellow,
+    onSurfaceVariant = Gray,
+    inverseSurface = Color.Green,
+    inverseOnSurface = Color.Red,
+    outline = Color.Magenta,
 )
 
 @Composable

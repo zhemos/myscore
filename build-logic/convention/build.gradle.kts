@@ -39,5 +39,9 @@ gradlePlugin {
             id = "myscore.android.library.compose"
             implementationClass = "AndroidLibraryComposeConventionPlugin"
         }
+        register("androidFeature") {
+            id = "myscore.android.feature"
+            implementationClass = "AndroidFeatureConventionPlugin"
+        }
     }
 }
