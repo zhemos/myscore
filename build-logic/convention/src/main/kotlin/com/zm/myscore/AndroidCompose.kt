@@ -24,7 +24,7 @@ internal fun Project.configureAndroidCompose(
             add("implementation", platform(bom))
             add("androidTestImplementation", platform(bom))
             // Add ComponentActivity to debug manifest
-            add("debugImplementation", libs.findLibrary("androidx.ui.test.manifest").get())
+            add("debugImplementation", libs.findLibrary("androidx.compose.ui.test.manifest").get())
             // Screenshot Tests on JVM
             // add("testImplementation", libs.findLibrary("robolectric").get())
             // add("testImplementation", libs.findLibrary("roborazzi").get())
