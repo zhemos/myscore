@@ -2,7 +2,9 @@ package com.zm.myscore.core.designsystem.theme
 
 import androidx.compose.ui.graphics.Color
 
-internal val DarkGreen = Color(0xFF00141D)
+internal val PrimaryLight = Color(0xFF001E28)
+internal val PrimaryNight = Color(0xFF00141D)
+internal val TTTTT = Color(0xFF010A0F)
 internal val Black = Color(0xFF010A0F)
 internal val White = Color(0xFFFFFFFF)
 internal val Red10 = Color(0xFFC70237)

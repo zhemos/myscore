@@ -7,6 +7,7 @@ import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.NavigationBarItemDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 
 @Composable
@@ -45,8 +46,8 @@ fun MyScoreNavigationBar(
 ) {
     NavigationBar(
         modifier = modifier,
-        contentColor = MyScoreNavigationDefaults.navigationContentColor(),
-        tonalElevation = 10.dp,
+        contentColor = Color.Blue,//MyScoreNavigationDefaults.navigationContentColor(),
+        tonalElevation = 0.dp,
         content = content,
     )
 }

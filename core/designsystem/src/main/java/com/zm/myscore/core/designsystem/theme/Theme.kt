@@ -17,7 +17,7 @@ import androidx.compose.ui.unit.dp
 
 @VisibleForTesting
 private val DarkColorScheme = darkColorScheme(
-    primary = Black,
+    primary = PrimaryNight,
     onPrimary = Black,
     primaryContainer = Black,
     onPrimaryContainer = Black,
@@ -35,7 +35,7 @@ private val DarkColorScheme = darkColorScheme(
     onErrorContainer = Black,
     background = Black,
     onBackground = Black,
-    surface = Black,
+    surface = PrimaryNight,
     onSurface = Black,
     surfaceVariant = Black,
     onSurfaceVariant = Black,
@@ -46,7 +46,7 @@ private val DarkColorScheme = darkColorScheme(
 
 @VisibleForTesting
 private val LightColorScheme = lightColorScheme(
-    primary = Color.Green,
+    primary = PrimaryLight,
     onPrimary = White,
     primaryContainer = Color.Magenta,
     onPrimaryContainer = Color.Yellow,
@@ -64,10 +64,10 @@ private val LightColorScheme = lightColorScheme(
     onErrorContainer = White,
     background = Color.Black,
     onBackground = Yellow,
-    surface = White,
+    surface = PrimaryLight,
     onSurface = Red10,
     surfaceVariant = DarkYellow,
-    onSurfaceVariant = Gray,
+    onSurfaceVariant = Color.Blue,
     inverseSurface = Color.Green,
     inverseOnSurface = Color.Red,
     outline = Color.Magenta,
@@ -89,8 +89,8 @@ fun MyScoreTheme(
     // Background theme
     val defaultBackgroundTheme = BackgroundTheme(
         color = colorScheme.surface,
-        tonalElevation = 2.dp,
     )
+
     CompositionLocalProvider(
         LocalBackgroundTheme provides defaultBackgroundTheme,
     ) {

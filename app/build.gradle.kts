@@ -38,6 +38,7 @@ dependencies {
     implementation(projects.feature.live)
     implementation(projects.feature.favourites)
     implementation(projects.feature.standings)
+    implementation(projects.feature.settings)
 
     implementation(projects.core.designsystem)
 
@@ -49,6 +50,7 @@ dependencies {
     implementation(libs.androidx.compose.runtime.tracing)
     implementation(libs.androidx.compose.material3.windowsizeclass)
     implementation(libs.androidx.navigation.compose)
+    implementation(libs.androidx.core.splashscreen)
 
     testImplementation(libs.junit)
     testImplementation(libs.androidx.navigation.testing)

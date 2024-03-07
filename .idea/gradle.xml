@@ -30,6 +30,7 @@
             <option value="$PROJECT_DIR$/feature/all_games" />
             <option value="$PROJECT_DIR$/feature/favourites" />
             <option value="$PROJECT_DIR$/feature/live" />
+            <option value="$PROJECT_DIR$/feature/settings" />
             <option value="$PROJECT_DIR$/feature/standings" />
           </set>
         </option>

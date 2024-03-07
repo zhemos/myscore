@@ -8,6 +8,9 @@ import androidx.compose.material.icons.outlined.Stadium
 import androidx.compose.material.icons.rounded.AssistantPhoto
 import androidx.compose.material.icons.rounded.Favorite
 import androidx.compose.material.icons.rounded.LiveTv
+import androidx.compose.material.icons.rounded.Search
+import androidx.compose.material.icons.rounded.Settings
+import androidx.compose.material.icons.rounded.SportsFootball
 import androidx.compose.material.icons.rounded.Stadium
 
 object MyScoreIcons {
@@ -19,4 +22,7 @@ object MyScoreIcons {
     val FavouritesBorder = Icons.Outlined.Favorite
     val Standings = Icons.Rounded.AssistantPhoto
     val StandingsBorder = Icons.Outlined.AssistantPhoto
+    val Ball = Icons.Rounded.SportsFootball
+    val Search = Icons.Rounded.Search
+    val Settings = Icons.Rounded.Settings
 }

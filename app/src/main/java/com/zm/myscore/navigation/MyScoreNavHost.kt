@@ -1,5 +1,7 @@
 package com.zm.myscore.navigation
 
+import androidx.compose.foundation.background
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
@@ -21,7 +23,7 @@ fun MyScoreNavHost(
     NavHost(
         navController = navController,
         startDestination = startDestination,
-        modifier = modifier,
+        modifier = modifier.background(MaterialTheme.colorScheme.onPrimary),
     ) {
         allGamesScreen()
         favouritesScreen()

@@ -1,6 +1,7 @@
 package com.zm.myscore.ui
 
 import android.util.Log
+import androidx.compose.material3.windowsizeclass.WindowSizeClass
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Stable
 import androidx.compose.runtime.remember
@@ -11,10 +12,14 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navOptions
+import com.zm.myscore.feature.all_games.navigation.allGamesNavigationRoute
 import com.zm.myscore.feature.all_games.navigation.navigateToAllGames
+import com.zm.myscore.feature.favourites.navigation.favouritesRoute
 import com.zm.myscore.feature.favourites.navigation.navigateToFavourites
+import com.zm.myscore.feature.live.navigation.liveRoute
 import com.zm.myscore.feature.live.navigation.navigateToLive
 import com.zm.myscore.feature.standings.navigation.navigateToStandings
+import com.zm.myscore.feature.standings.navigation.standingsRoute
 import com.zm.myscore.navigation.TopLevelDestination
 import com.zm.myscore.navigation.TopLevelDestination.ALL_GAMES
 import com.zm.myscore.navigation.TopLevelDestination.LIVE
@@ -23,20 +28,31 @@ import com.zm.myscore.navigation.TopLevelDestination.STANDINGS
 
 @Composable
 fun rememberMyScoreAppState(
+    windowSizeClass: WindowSizeClass,
     navController: NavHostController = rememberNavController(),
 ): MyScoreAppState {
     NavigationTrackingSideEffect(navController)
-    return remember(navController) {
-        MyScoreAppState(navController)
+    return remember(navController, windowSizeClass) {
+        MyScoreAppState(navController, windowSizeClass)
     }
 }
 
 @Stable
 class MyScoreAppState(
     val navController: NavHostController,
+    val windowSizeClass: WindowSizeClass,
 ) {
     val currentDestination: NavDestination?
         @Composable get() = navController.currentBackStackEntryAsState().value?.destination
+
+    val currentTopLevelDestination: TopLevelDestination?
+        @Composable get() = when (currentDestination?.route) {
+            allGamesNavigationRoute -> ALL_GAMES
+            liveRoute -> LIVE
+            favouritesRoute -> FAVOURITES
+            standingsRoute -> STANDINGS
+            else -> null
+        }
 
     val topLevelDestination: List<TopLevelDestination> = TopLevelDestination.entries
 
