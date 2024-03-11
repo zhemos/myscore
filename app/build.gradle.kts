@@ -51,6 +51,7 @@ dependencies {
     implementation(libs.androidx.compose.material3.windowsizeclass)
     implementation(libs.androidx.navigation.compose)
     implementation(libs.androidx.core.splashscreen)
+    implementation(libs.accompanist.systemuicontroller)
 
     testImplementation(libs.junit)
     testImplementation(libs.androidx.navigation.testing)

@@ -1,6 +1,6 @@
 package com.zm.myscore.ui
 
-import androidx.compose.foundation.background
+import android.util.Log
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.WindowInsets
@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeDrawing
 import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarDuration
 import androidx.compose.material3.SnackbarHost
@@ -54,8 +55,8 @@ fun MyScoreApp(
             modifier = Modifier.semantics {
                 testTagsAsResourceId = true
             },
-            containerColor = Color.Transparent,
-            contentColor = Color.Red,
+            containerColor = MaterialTheme.colorScheme.primary,
+            contentColor = Color.Red,//?
             contentWindowInsets = WindowInsets(0, 0, 0, 0),
             snackbarHost = { SnackbarHost(snackbarHostState) },
             bottomBar = {
@@ -81,7 +82,12 @@ fun MyScoreApp(
                 Column(Modifier.fillMaxSize()) {
                     MyScoreTopAppBar(
                         titleRes = R.string.app_name,
-                        onSettingsClick = {}
+                        onSearchClick = {
+                          Log.d("zm1996", "search")
+                        },
+                        onSettingsClick = {
+                            Log.d("zm1996", "settings")
+                        },
                     )
                     MyScoreNavHost(appState = appState, onShowSnackbar = { message, action ->
                         snackbarHostState.showSnackbar(
@@ -104,7 +110,7 @@ private fun MyScoreBottomBar(
     modifier: Modifier = Modifier,
 ) {
     MyScoreNavigationBar(
-        modifier = modifier.background(Color.Red),
+        modifier = modifier,
     ) {
         destinations.forEach { destination ->
             val selected = currentDestination.isTopLevelDestinationInHierarchy(destination)

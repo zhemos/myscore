@@ -22,8 +22,8 @@ import com.zm.myscore.feature.standings.navigation.navigateToStandings
 import com.zm.myscore.feature.standings.navigation.standingsRoute
 import com.zm.myscore.navigation.TopLevelDestination
 import com.zm.myscore.navigation.TopLevelDestination.ALL_GAMES
-import com.zm.myscore.navigation.TopLevelDestination.LIVE
 import com.zm.myscore.navigation.TopLevelDestination.FAVOURITES
+import com.zm.myscore.navigation.TopLevelDestination.LIVE
 import com.zm.myscore.navigation.TopLevelDestination.STANDINGS
 
 @Composable
