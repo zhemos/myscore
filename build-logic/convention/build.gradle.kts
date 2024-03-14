@@ -43,5 +43,9 @@ gradlePlugin {
             id = "myscore.android.feature"
             implementationClass = "AndroidFeatureConventionPlugin"
         }
+        register("androidHilt") {
+            id = "myscore.android.hilt"
+            implementationClass = "AndroidHiltConventionPlugin"
+        }
     }
 }

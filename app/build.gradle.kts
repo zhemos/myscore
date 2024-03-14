@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.myscore.android.application)
     alias(libs.plugins.myscore.android.application.compose)
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -39,7 +40,6 @@ dependencies {
     implementation(projects.feature.favourites)
     implementation(projects.feature.standings)
     implementation(projects.feature.settings)
-
     implementation(projects.core.designsystem)
 
     implementation(libs.androidx.core.ktx)
@@ -52,6 +52,8 @@ dependencies {
     implementation(libs.androidx.navigation.compose)
     implementation(libs.androidx.core.splashscreen)
     implementation(libs.accompanist.systemuicontroller)
+
+    ksp(libs.hilt.compiler)
 
     testImplementation(libs.junit)
     testImplementation(libs.androidx.navigation.testing)

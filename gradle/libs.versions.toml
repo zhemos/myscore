@@ -22,6 +22,9 @@ accompanistSystemuicontroller = "0.27.0"
 junit4 = "4.13.2"
 kotlinxDatetime = "0.4.1"
 kotlinxSerializationJson = "1.6.0"
+hilt = "2.49"
+hiltExt = "1.2.0"
+ksp = "1.9.10-1.0.13"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -64,6 +67,11 @@ kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-
 androidx-core-splashscreen = { group = "androidx.core", name = "core-splashscreen", version.ref = "androidxCoreSplashscreen" }
 accompanist-systemuicontroller = { group = "com.google.accompanist", name = "accompanist-systemuicontroller", version.ref = "accompanistSystemuicontroller" }
 junit4 = { group = "junit", name = "junit", version.ref = "junit4" }
+hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
+hilt-android-testing = { group = "com.google.dagger", name = "hilt-android-testing", version.ref = "hilt" }
+hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" }
+hilt-ext-compiler = { group = "androidx.hilt", name = "hilt-compiler", version.ref = "hiltExt" }
+hilt-ext-work = { group = "androidx.hilt", name = "hilt-work", version.ref = "hiltExt" }
 
 # Dependencies of the included build-logic
 android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "androidGradlePlugin" }
@@ -75,6 +83,8 @@ android-library = { id = "com.android.library", version.ref = "androidGradlePlug
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 
 # Plugins defined by this project
 myscore-android-application = { id = "myscore.android.application", version = "unspecified" }
@@ -82,4 +92,5 @@ myscore-android-application-compose = { id = "myscore.android.application.compos
 myscore-android-library = { id = "myscore.android.library", version = "unspecified" }
 myscore-android-library-compose = { id = "myscore.android.library.compose", version = "unspecified" }
 myscore-android-feature = { id = "myscore.android.feature", version = "unspecified" }
+myscore-android-hilt = { id = "myscore.android.hilt", version = "unspecified" }
 
