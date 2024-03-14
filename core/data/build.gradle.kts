@@ -5,22 +5,21 @@ plugins {
 }
 
 android {
-    namespace = "com.zm.myscore.core.network"
-
+    namespace = "com.zm.myscore.core.data"
     testOptions {
         unitTests {
             isIncludeAndroidResources = true
+            isReturnDefaultValues = true
         }
     }
 }
 
 dependencies {
     implementation(projects.core.common)
+    implementation(projects.core.network)
+    implementation(libs.androidx.core.ktx)
     implementation(libs.kotlinx.coroutines.android)
     implementation(libs.kotlinx.serialization.json)
-    implementation(libs.okhttp.logging)
-    implementation(libs.retrofit.core)
-    implementation(libs.retrofit.kotlin.serialization)
 
     testImplementation(projects.core.testing)
 }

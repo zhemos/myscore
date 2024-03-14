@@ -22,6 +22,10 @@ class FakeAppNetworkDataSource(
         return assets.open(COUNTRIES_ASSET).use(networkJson::decodeFromStream)
     }
 
+    override suspend fun getCountriesSimply(): List<CountryDto> {
+        TODO("Not yet implemented")
+    }
+
     companion object {
         private const val COUNTRIES_ASSET = "countries.json"
     }
