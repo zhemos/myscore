@@ -1,4 +1,4 @@
-package com.zm.myscore.core.testing
+package com.zm.myscore.core.domain
 
 import org.junit.Test
 

@@ -99,4 +99,4 @@ myscore-android-library = { id = "myscore.android.library", version = "unspecifi
 myscore-android-library-compose = { id = "myscore.android.library.compose", version = "unspecified" }
 myscore-android-feature = { id = "myscore.android.feature", version = "unspecified" }
 myscore-android-hilt = { id = "myscore.android.hilt", version = "unspecified" }
-
+myscore-jvm-library = { id = "myscore.jvm.library", version = "unspecified" }

@@ -47,5 +47,9 @@ gradlePlugin {
             id = "myscore.android.hilt"
             implementationClass = "AndroidHiltConventionPlugin"
         }
+        register("jvmLibrary") {
+            id = "myscore.jvm.library"
+            implementationClass = "JvmLibraryConventionPlugin"
+        }
     }
 }
